@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/et_query"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:background="@drawable/rounded_f9f8f3"
+        android:backgroundTint="#f9f8f3"
+        android:hint="Enter query string"
+        android:inputType="text"
+        android:paddingLeft="@dimen/padding12"
+        android:paddingTop="@dimen/padding12"
+        android:paddingRight="@dimen/padding12"
+        android:paddingBottom="@dimen/padding12"
+        android:textColor="#444444"
+        android:textColorHint="#9b9b9b"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_city"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:background="@drawable/rounded_f9f8f3"
+        android:backgroundTint="#f9f8f3"
+        android:hint="Enter city name"
+        android:inputType="text"
+        android:paddingLeft="@dimen/padding12"
+        android:paddingTop="@dimen/padding12"
+        android:paddingRight="@dimen/padding12"
+        android:paddingBottom="@dimen/padding12"
+        android:textColor="#444444"
+        android:textColorHint="#9b9b9b"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_query" />
+
+    <View
+        android:id="@+id/toolbar_bottom_line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/padding8"
+        android:layout_marginTop="@dimen/padding12"
+        android:layout_marginEnd="@dimen/padding8"
+        android:background="#eaeaea"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_city" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_16"
+        android:divider="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_bottom_line" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
