@@ -16,7 +16,6 @@ object NetworkRepository {
         val service =
             RetrofitInstance.retrofitInstance.create(GetDataService::class.java)
         val call = service.getAddress(queryString,cityName)
-        call.isExecuted
         return call
     }
 }
